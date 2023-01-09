@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Xml;
+
 namespace GeradorDeSenha
 {
 	public partial class Form1 : Form
@@ -18,10 +21,10 @@ namespace GeradorDeSenha
 			if (!string.IsNullOrWhiteSpace(tb1.Text))
 			{
 				TamanhoDaSenha = Convert.ToInt32(tb1.Text);
-				if (TamanhoDaSenha > 20)
+				if (TamanhoDaSenha > 30)
 				{
-					TamanhoDaSenha = 20;
-					tb1.Text = "20";
+					TamanhoDaSenha = 30;
+					tb1.Text = "30";
 				}
 				if (TamanhoDaSenha < 8)
 				{
@@ -37,9 +40,9 @@ namespace GeradorDeSenha
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			if (int.Parse(tb1.Text) < 8 || int.Parse(tb1.Text) > 20)
+			if (int.Parse(tb1.Text) < 8 || int.Parse(tb1.Text) > 30 || tb1.Text == ""  || tb1.Text == " ")
 			{
-				tb2.Text = "O tamanho da senha deve ser maior que 8 e menor que 20.";
+				tb2.Text = "O tamanho da senha deve ser maior que 8 e menor que 30.";
 			}
 
 
@@ -58,5 +61,31 @@ namespace GeradorDeSenha
 			}	
 		}
 
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void tb2_TextChanged(object sender, EventArgs e)
+		{
+			string QuebraLinha = Environment.NewLine;
+			tb3.Text += tb2.Text + QuebraLinha;
+		}
+
+		private void tb3_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			tb2.Text = null;
+			tb3.Text = null;
+		}
+
+		private void tb1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
