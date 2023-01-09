@@ -34,12 +34,16 @@ namespace GeradorDeSenha
 				tb1.Text = "8";
 			}
 		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			if (int.Parse(tb1.Text) < 8 || int.Parse(tb1.Text) > 20)
 			{
 				tb2.Text = "O tamanho da senha deve ser maior que 8 e menor que 20.";
 			}
+
+
+
 			else
 			{
 				ValidaTamanhoSenha();
