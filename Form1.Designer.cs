@@ -43,10 +43,10 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label1.Location = new System.Drawing.Point(17, 96);
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label1.Location = new System.Drawing.Point(11, 94);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(127, 17);
+			this.label1.Size = new System.Drawing.Size(143, 20);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Tamanho Da Senha";
 			// 
@@ -66,6 +66,7 @@
 			this.tb2.Location = new System.Drawing.Point(14, 153);
 			this.tb2.Multiline = true;
 			this.tb2.Name = "tb2";
+			this.tb2.ReadOnly = true;
 			this.tb2.Size = new System.Drawing.Size(228, 39);
 			this.tb2.TabIndex = 3;
 			this.tb2.TextChanged += new System.EventHandler(this.tb2_TextChanged);
@@ -98,6 +99,7 @@
 			// 
 			// button2
 			// 
+			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button2.Location = new System.Drawing.Point(267, 198);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(228, 23);
@@ -108,7 +110,8 @@
 			// 
 			// tb1
 			// 
-			this.tb1.Location = new System.Drawing.Point(150, 96);
+			this.tb1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.tb1.Location = new System.Drawing.Point(168, 92);
 			this.tb1.Maximum = new decimal(new int[] {
             30,
             0,
@@ -120,7 +123,7 @@
             0,
             0});
 			this.tb1.Name = "tb1";
-			this.tb1.Size = new System.Drawing.Size(92, 23);
+			this.tb1.Size = new System.Drawing.Size(74, 27);
 			this.tb1.TabIndex = 7;
 			this.tb1.Value = new decimal(new int[] {
             8,
@@ -132,8 +135,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(507, 236);
+			this.ClientSize = new System.Drawing.Size(507, 235);
 			this.Controls.Add(this.tb1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.tb3);
@@ -143,6 +147,7 @@
 			this.Controls.Add(this.label1);
 			this.MaximizeBox = false;
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Gerador de Senha";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.tb1)).EndInit();

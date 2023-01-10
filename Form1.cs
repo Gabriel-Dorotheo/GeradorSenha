@@ -50,7 +50,7 @@ namespace GeradorDeSenha
 			else
 			{
 				ValidaTamanhoSenha();
-				string caracteresPermitidos = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@$?_-";
+				string caracteresPermitidos = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()_+";
 				char[] chars = new char[int.Parse(tb1.Text)];
 				Random rd = new Random();
 				for (int i = 0; i < int.Parse(tb1.Text); i++)
@@ -69,7 +69,7 @@ namespace GeradorDeSenha
 		private void tb2_TextChanged(object sender, EventArgs e)
 		{
 			string QuebraLinha = Environment.NewLine;
-			tb3.Text += tb2.Text + QuebraLinha;
+			tb3.Text = tb2.Text + QuebraLinha + tb3.Text;
 		}
 
 		private void tb3_TextChanged(object sender, EventArgs e)
@@ -87,5 +87,6 @@ namespace GeradorDeSenha
 		{
 
 		}
+
 	}
 }
